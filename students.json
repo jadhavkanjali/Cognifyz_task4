@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Abhijeet Sharma",
+    "email": "abhijeet@example.com",
+    "course": "Information Technology"
+  },
+  {
+    "id": 2,
+    "name": "Apurva Patil",
+    "email": "apurva@example.com",
+    "course": "Computer Engineering"
+  },
+  {
+    "id": 4,
+    "name": "arya Jadhav",
+    "email": "arya@gmail.com",
+    "course": "CS"
+  },
+  {
+    "id": 5,
+    "name": "Anjali Jadhav",
+    "email": "anjali@example.com",
+    "course": "Information Technology"
+  }
+]

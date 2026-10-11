@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognifyz Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div>
+            <p class="brand">COGNIFYZ INTERNSHIP PROJECT</p>
+            <h1>Student Management</h1>
+            <p class="subtitle">Manage student records using a REST API.</p>
+        </div>
+        <span class="api-status" id="apiStatus">Connecting...</span>
+    </header>
+
+    <main class="container">
+        <section class="stats">
+            <div class="stat-card">
+                <span>Total Students</span>
+                <h2 id="totalStudents">0</h2>
+            </div>
+            <div class="stat-card">
+                <span>API Status</span>
+                <h2 id="statusText">Checking</h2>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2 id="formTitle">Add New Student</h2>
+
+            <form id="studentForm">
+                <input type="hidden" id="studentId">
+
+                <div class="form-grid">
+                    <label>
+                        Student Name
+                        <input type="text" id="name"
+                               placeholder="Enter full name" required>
+                    </label>
+
+                    <label>
+                        Email Address
+                        <input type="email" id="email"
+                               placeholder="Enter email address" required>
+                    </label>
+
+                    <label>
+                        Course
+                        <input type="text" id="course"
+                               placeholder="Enter course name" required>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn">Add Student</button>
+                    <button type="button" id="cancelBtn" class="secondary"
+                            hidden>Cancel Edit</button>
+                </div>
+            </form>
+
+            <p id="message" role="status"></p>
+        </section>
+
+        <section class="panel">
+            <div class="list-heading">
+                <div>
+                    <h2>Student Records</h2>
+                    <p>Data loaded from your own server API.</p>
+                </div>
+                <button id="refreshBtn" class="secondary">Refresh</button>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTable">
+                        <tr>
+                            <td colspan="5">Loading student records...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>Built for Cognifyz Internship — Level 3, Task 5</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
